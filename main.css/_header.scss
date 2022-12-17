@@ -1,0 +1,60 @@
+   //header//
+   .header{
+    @include spacing(0, 40px 20px);
+   
+    &__container{
+        @include flex(flex, row);
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__info{
+        @include flex(flex, row);
+        justify-content: center;
+        align-items: center;
+    }
+    &__img{
+        width: 150px;
+    }
+    &__text{
+        width: 210px;
+        @include spacing(0,0);
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 10px;
+        text-align: end;
+        display: none;
+    }
+    &__button{
+        @include spacing(0px 0px 0px 10px, 10px 20px);
+        background-color: rgba(235, 235, 235, 1);
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    &__title{
+        font-size: 40px;
+        width: 350px;
+        @include spacing(60px 0px, 0px);
+        line-height: 30px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .header__title{
+            font-size: 80px;
+            width: 100%;
+            line-height: 70px;
+            @include spacing(60px 0px 0px, 0px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header__title{
+            font-size: 60px;
+            width: 60%;
+            line-height: 50px;
+            @include spacing(60px 0px 0px, 0px);
+    }
+    .header__text{
+        display: block;
+    }
+}

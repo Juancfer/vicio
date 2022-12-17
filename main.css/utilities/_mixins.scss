@@ -1,0 +1,9 @@
+@mixin flex($display, $flex-flow){
+    display: $display;
+    flex-flow: $flex-flow;
+}
+
+@mixin spacing($margin, $padding){
+    margin: $margin;
+    padding: $padding;
+}
